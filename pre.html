@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Blog Sorting</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .header-abc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+
+    .header-abc h1 {
+      font-size: 24px;
+    }
+
+    .sort-options {
+      display: flex;
+      gap: 20px;
+    }
+
+    .sort-options select {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .sort-options {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-abc">
+    <h1 style="font-family: 'bitter'; font-weight: 600; font-size: 25px;">Latest Blog</h1>
+    <div class="sort-options">
+      <div>
+        <label for="role-select">Sort by role:</label>
+        <select id="role-select" style="font-family: 'Montserrat'; font-weight: 400; font-size: 14px;">
+          <option value="writer">Writer</option>
+          <option value="editor">Editor</option>
+          <option value="contributor">Contributor</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
